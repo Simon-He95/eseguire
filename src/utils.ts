@@ -1,34 +1,30 @@
-const childProcess = require('child_process');
+import fs from 'fs'
+import { jsShell } from 'lazy-js-utils'
+import { SUFFIX } from './constant'
 
-export function hasInstall(dep:string){
-  return isNpmInstall(dep) || isPnpmInstall(dep) || isBrewInstall(dep);
+export function hasInstall(dep: string) {
+  const { status } = jsShell(
+    `${dep} -v`,
+    'pipe',
+  )
+  return status === 0
 }
 
-
-function isNpmInstall(packageName:string){
-  try {
-    childProcess.execSync(`npm list -g ${packageName}`);
-    return true; // 包已全局安装
-  } catch (error) {
-    return false; // 包未全局安装
-  }
+export function isDirectory(path: string) {
+  return new Promise((resolve, reject) => {
+    fs.stat(path, (err, stats) => {
+      if (err)
+        reject(err)
+      else
+        resolve(stats.isDirectory())
+    })
+  })
 }
 
-function isPnpmInstall(packageName:string){
-  try {
-    childProcess.execSync(`pnpm list -g ${packageName}`);
-    return true; // 包已全局安装
-  } catch (error) {
-    return false; // 包未全局安装
-  }
-}
-
-
-function isBrewInstall(packageName:string){
-  try {
-    childProcess.execSync('brew list').includes(packageName);
-    return true; // 包已全局安装
-  } catch (error) {
-    return false; // 包未全局安装
+export function findFile(filepath: string) {
+  for (const suffix of SUFFIX) {
+    const url = `${filepath}${suffix}`
+    if (fs.existsSync(url))
+      return url
   }
 }

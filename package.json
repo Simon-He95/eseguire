@@ -33,7 +33,7 @@
     }
   },
   "bin": {
-    "run": "./cli.mjs"
+    "er": "./cli.mjs"
   },
   "files": [
     "dist"
@@ -56,7 +56,9 @@
     "bumpp": "^8.2.1",
     "eslint": "^8.18.0",
     "esno": "^0.16.3",
+    "lazy-js-utils": "^0.0.64",
     "lint-staged": "^13.1.0",
+    "picocolors": "^1.0.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "tsup": "^6.5.0",

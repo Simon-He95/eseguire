@@ -1,5 +1,5 @@
 ## Eseguire
->WIP: 法语Eseguire的意思是执行，一个快速执行的工具，根据当前环境下选择使用 `bun` `node` `esno` 的方式去执行 js | ts | jsx | tsx 文件，并且支持省略后缀名，去自动匹配
+法语Eseguire的意思是执行，一个快速执行的工具，根据当前环境下选择使用 `bun` `node` `esno` 的方式去执行 js | ts | jsx | tsx 文件，并且支持省略后缀名，去自动匹配
 
 ### 🚀 Install
 ```

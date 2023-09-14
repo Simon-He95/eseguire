@@ -52,8 +52,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
+    "@simon_he/qargs": "^0.0.5",
     "@types/node": "^18.0.0",
     "bumpp": "^8.2.1",
+    "easy-args": "^1.0.0",
     "eslint": "^8.18.0",
     "esno": "^0.16.3",
     "lazy-js-utils": "^0.0.64",

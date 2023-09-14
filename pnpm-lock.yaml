@@ -11,12 +11,18 @@ importers:
       '@antfu/eslint-config':
         specifier: ^0.25.1
         version: 0.25.1(eslint@8.18.0)(typescript@4.7.4)
+      '@simon_he/qargs':
+        specifier: ^0.0.5
+        version: 0.0.5(typescript@4.7.4)
       '@types/node':
         specifier: ^18.0.0
         version: 18.0.0
       bumpp:
         specifier: ^8.2.1
         version: 8.2.1
+      easy-args:
+        specifier: ^1.0.0
+        version: 1.0.0
       eslint:
         specifier: ^8.18.0
         version: 8.18.0
@@ -308,6 +314,19 @@ packages:
       fastq: 1.10.1
     dev: true
 
+  /@simon_he/qargs@0.0.5(typescript@4.7.4):
+    resolution: {integrity: sha512-3GIK0sB0wtqtWHHWbz1DzJHq2WkGifa6jcOgH7B+5naocVqTotN0y1LMh37m5A8YQ5LgM6gFMQDydtVP7Pow0A==}
+    dependencies:
+      lazy-js-utils: 0.0.24(typescript@4.7.4)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@vue/composition-api'
+      - postcss
+      - supports-color
+      - ts-node
+      - typescript
+    dev: true
+
   /@types/chai-subset@1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
     dependencies:
@@ -342,6 +361,10 @@ packages:
 
   /@types/unist@2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@types/web-bluetooth@0.0.14:
+    resolution: {integrity: sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@5.32.0(@typescript-eslint/parser@5.26.0)(eslint@8.18.0)(typescript@4.7.4):
@@ -593,6 +616,43 @@ packages:
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
+    dev: true
+
+  /@vueuse/core@8.9.4(vue@3.3.4):
+    resolution: {integrity: sha512-B/Mdj9TK1peFyWaPof+Zf/mP9XuGAngaJZBwPaXBvU3aCTZlx3ltlrFFFyMV4iGBwsjSCeUCgZrtkEj9dS2Y3Q==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@types/web-bluetooth': 0.0.14
+      '@vueuse/metadata': 8.9.4
+      '@vueuse/shared': 8.9.4(vue@3.3.4)
+      vue: 3.3.4
+      vue-demi: 0.14.6(vue@3.3.4)
+    dev: true
+
+  /@vueuse/metadata@8.9.4:
+    resolution: {integrity: sha512-IwSfzH80bnJMzqhaapqJl9JRIiyQU0zsRGEgnxN6jhq7992cPUJIRfV+JHRIZXjYqbwt07E1gTEp0R0zPJ1aqw==}
+    dev: true
+
+  /@vueuse/shared@8.9.4(vue@3.3.4):
+    resolution: {integrity: sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.3.4
+      vue-demi: 0.14.6(vue@3.3.4)
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.7.1):
@@ -1118,6 +1178,10 @@ packages:
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
+    dev: true
+
+  /easy-args@1.0.0:
+    resolution: {integrity: sha512-pWzXA1VhfOJ9xOU1ooH3Vw4+/Nwx91gOd4ZbN+K0MefHUqHb6MWxm2RUOxW0dTkBWQna1E2ZiONfGzO/FCzyOA==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2536,6 +2600,24 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /lazy-js-utils@0.0.24(typescript@4.7.4):
+    resolution: {integrity: sha512-DoTQBpjFjomXfnaWmXnzVnCZlK5rU9hDK31zY7O5lXAA/9aywB+vtLC960WuuFOrF7f6T+YIDZuQJgSPuQmqBQ==}
+    dependencies:
+      '@vueuse/core': 8.9.4(vue@3.3.4)
+      htmlparser2: 8.0.2
+      qrcode: 1.5.3
+      spark-md5: 3.0.2
+      tsup: 6.5.0(typescript@4.7.4)
+      vue: 3.3.4
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@vue/composition-api'
+      - postcss
+      - supports-color
+      - ts-node
+      - typescript
+    dev: true
+
   /lazy-js-utils@0.0.37(vue@3.3.4):
     resolution: {integrity: sha512-kr6ehqgZmUDkBFUdFaOby43wZ/fdUODJVDRY4v0ZlGoTKTXZ/huea8Mu9LA2ThSt11URObpE+DMWS+IHBtKW2w==}
     peerDependencies:
@@ -3805,6 +3887,21 @@ packages:
       - sass
       - stylus
       - supports-color
+    dev: true
+
+  /vue-demi@0.14.6(vue@3.3.4):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.3.4
     dev: true
 
   /vue-eslint-parser@9.0.2(eslint@8.18.0):

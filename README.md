@@ -15,7 +15,7 @@ er src
 ### 🧬 Options
 ```
 ## bun --inspect-wait
---debug
+--debug or -d
 ```
 
 ## License
